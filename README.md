@@ -5,7 +5,7 @@ This repository contains ROS packages for the Arctos robotic arm, enabling motio
 ## How to Use:
 
 ### Setting Up Arctos Simulation with Motion Planning
-![moveit_screenshot.png](/moveit_screenshot.png)
+![moveit_screenshot.png](/moveit_screenshot.jpg)
 
 1. Make sure you have ROS properly installed with a working workspace. This repository assumes ROS Kinetic on Ubuntu 16.04, so make any necessary adjustments if you are using a different configuration. Place the 'arctos_ros' package in the 'src' directory of your catkin workspace.
 
