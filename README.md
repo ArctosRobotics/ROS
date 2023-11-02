@@ -28,7 +28,7 @@ initially forked from [jesseweisberg/moveo_ros](https://github.com/jesseweisberg
 7. With the simulation already running, execute the following commands in separate terminal windows:
 
    - ```rosrun rosserial_python serial_node.py /dev/ttyUSB0``` (establishes a rosserial node to communicate with the Arduino).
-   - ```rosrun moveo_moveit moveo_moveit_convert``` (converts joint_state rotations from the simulation to steps and publishes them on the /joint_steps topic, which the Arduino script subscribes to).
+   - ```rosrun moveo_moveit moveit_convert``` (converts joint_state rotations from the simulation to steps and publishes them on the /joint_steps topic, which the Arduino script subscribes to).
    - ```rostopic pub gripper_angle std_msgs/UInt16 <angle 0-180>``` (publishes the gripper angle).
 
 **Now, any trajectories planned and executed in the simulation will be echoed on the real Arctos robot.**
