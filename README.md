@@ -1,7 +1,7 @@
 # Arctos Robotic Arm (ROS Packages)
 
 This repository contains ROS packages for the Arctos robotic arm, enabling motion planning, execution, and simulation in both virtual and real environments.
-initially forked from [jesseweisberg/moveo_ros]([https://github.com/syuntoku14/fusion2urdf](https://github.com/jesseweisberg/moveo_ros)) and edited match Arctos 6 axis robotic arm. 
+initially forked from [jesseweisberg/moveo_ros](https://github.com/jesseweisberg/moveo_ros) and edited match Arctos 6 axis robotic arm. 
 ## How to Use:
 
 ### Setting Up Arctos Simulation with Motion Planning
