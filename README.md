@@ -1,11 +1,11 @@
 # Arctos Robotic Arm (ROS Packages)
 
 This repository contains ROS packages for the Arctos robotic arm, enabling motion planning, execution, and simulation in both virtual and real environments.
-
+Original
 ## How to Use:
 
 ### Setting Up Arctos Simulation with Motion Planning
-![moveit_screenshot.png](/moveit_screenshot.jpg)
+![moveit_screenshot.jpg](/moveit_screenshot.jpg)
 
 1. Make sure you have ROS properly installed with a working workspace. This repository assumes ROS Kinetic on Ubuntu 16.04, so make any necessary adjustments if you are using a different configuration. Place the 'arctos_ros' package in the 'src' directory of your catkin workspace.
 
@@ -71,7 +71,3 @@ Here, you'll find the configuration files for Moveit, a motion planning framewor
   - More information can be found on the ROS wiki: 
     - In Section 2.2 here: (http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
     - (http://wiki.ros.org/rosserial/Tutorials/Adding%20Other%20Messages)
-
-- You can reference my current layout and wiring schematic below:
-  ![aerialRobotSketch.pdf](/aerial_robot_sketch.png)
-
