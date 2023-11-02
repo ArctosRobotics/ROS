@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<robot name="arctos_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find arctos_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find arctos_urdf_description)/urdf/arctos_urdf.trans" />
+<xacro:include filename="$(find arctos_urdf_description)/urdf/arctos_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0009375030874740357 0.047087016508753216 0.06663230338123677" rpy="0 0 0"/>
+    <mass value="7.598577592821282"/>
+    <inertia ixx="0.063328" iyy="0.03095" izz="0.072371" ixy="-0.000434" iyz="0.001366" ixz="0.000108"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_1_1">
+  <inertial>
+    <origin xyz="0.0022188890353287776 -0.004863444449475237 0.08546835509394825" rpy="0 0 0"/>
+    <mass value="10.394711633971145"/>
+    <inertia ixx="0.061139" iyy="0.073854" izz="0.05669" ixy="0.00017" iyz="0.003835" ixz="-0.00148"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.000529 -0.111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.000529 -0.111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_2_1">
+  <inertial>
+    <origin xyz="0.055314283466519745 0.010843565259072822 0.11412354328486207" rpy="0 0 0"/>
+    <mass value="11.558090086674309"/>
+    <inertia ixx="0.128567" iyy="0.14463" izz="0.044463" ixy="3e-06" iyz="-0.003293" ixz="0.001539"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05713 0.020356 -0.289378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05713 0.020356 -0.289378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_3_1">
+  <inertial>
+    <origin xyz="-0.04178369242643258 -0.03913025368943244 0.01221763827191602" rpy="0 0 0"/>
+    <mass value="3.601405589552794"/>
+    <inertia ixx="0.012497" iyy="0.006916" izz="0.011789" ixy="-3.6e-05" iyz="0.001536" ixz="-8.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043 0.019045 -0.550385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043 0.019045 -0.550385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_4_1">
+  <inertial>
+    <origin xyz="0.00021104999825562586 -0.06028834880207104 -0.0005408226217131773" rpy="0 0 0"/>
+    <mass value="3.7852887653107565"/>
+    <inertia ixx="0.011624" iyy="0.011491" izz="0.017363" ixy="-9e-06" iyz="-7.1e-05" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1e-06 0.15874 -0.57209" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-1e-06 0.15874 -0.57209" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_5_1">
+  <inertial>
+    <origin xyz="0.0397291414278933 -0.012662394123331089 0.0007929187272999183" rpy="0 0 0"/>
+    <mass value="0.8319811655030993"/>
+    <inertia ixx="0.000732" iyy="0.000958" izz="0.000907" ixy="-1.2e-05" iyz="-5e-06" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.039011 0.279927 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="0.039011 0.279927 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Gripper_1">
+  <inertial>
+    <origin xyz="0.0036112727264542635 -0.014760653808445767 -0.00103677815369696" rpy="0 0 0"/>
+    <mass value="0.5810486809925093"/>
+    <inertia ixx="0.000385" iyy="0.000495" izz="0.000263" ixy="1e-05" iyz="-2e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000193 0.319847 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000193 0.319847 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link_6_1">
+  <inertial>
+    <origin xyz="6.567946382108388e-08 -0.003042398377876454 -3.032508957279134e-07" rpy="0 0 0"/>
+    <mass value="0.10343478090890781"/>
+    <inertia ixx="5.2e-05" iyy="0.000103" izz="5.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000193 0.313762 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000193 0.313762 -0.570316" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_jaw_1">
+  <inertial>
+    <origin xyz="-0.011142702480351952 -0.009692440309284511 -0.009385792627785827" rpy="0 0 0"/>
+    <mass value="0.07369602565859415"/>
+    <inertia ixx="1.1e-05" iyy="6e-06" izz="1.4e-05" ixy="2e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.007934 0.359845 -0.599867" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Left_jaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.007934 0.359845 -0.599867" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Left_jaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_jaw_1">
+  <inertial>
+    <origin xyz="-0.008289104952972526 -0.009768535307719373 0.009395511902715814" rpy="0 0 0"/>
+    <mass value="0.07312902168719511"/>
+    <inertia ixx="1.1e-05" iyy="6e-06" izz="1.4e-05" ixy="-1e-06" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.007934 0.359845 -0.539867" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Right_jaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_blue_2"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.007934 0.359845 -0.539867" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arctos_urdf_description/meshes/Right_jaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint1" type="continuous">
+  <origin xyz="0.0 0.000529 0.111" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Link_1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="joint2" type="continuous">
+  <origin xyz="-0.05713 -0.020885 0.178378" rpy="0 0 0"/>
+  <parent link="Link_1_1"/>
+  <child link="Link_2_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="joint3" type="continuous">
+  <origin xyz="0.10013 0.001311 0.261007" rpy="0 0 0"/>
+  <parent link="Link_2_1"/>
+  <child link="Link_3_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="joint4" type="continuous">
+  <origin xyz="-0.042999 -0.139695 0.021705" rpy="0 0 0"/>
+  <parent link="Link_3_1"/>
+  <child link="Link_4_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="joint5" type="continuous">
+  <origin xyz="-0.039012 -0.121187 -0.001774" rpy="0 0 0"/>
+  <parent link="Link_4_1"/>
+  <child link="Link_5_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="gripper" type="fixed">
+  <origin xyz="0.0 -0.006085 0.0" rpy="0 0 0"/>
+  <parent link="Link_6_1"/>
+  <child link="Gripper_1"/>
+</joint>
+
+<joint name="joint6" type="continuous">
+  <origin xyz="0.039204 -0.033835 0.0" rpy="0 0 0"/>
+  <parent link="Link_5_1"/>
+  <child link="Link_6_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="jaw1" type="prismatic">
+  <origin xyz="0.007741 -0.039998 0.029551" rpy="0 0 0"/>
+  <parent link="Gripper_1"/>
+  <child link="Left_jaw_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="0.015" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw2" type="prismatic">
+  <origin xyz="0.007741 -0.039998 -0.030449" rpy="0 0 0"/>
+  <parent link="Gripper_1"/>
+  <child link="Right_jaw_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="0.015" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>
