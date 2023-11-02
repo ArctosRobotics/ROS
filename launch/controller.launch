@@ -1,9 +1,0 @@
-<launch>
-
-<rosparam file="$(find ruxonros2_description)/launch/controller.yaml" command="load"/>
-<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="ruxonros2" args="Rev28_position_controller Rev29_position_controller Rev30_position_controller Rev31_position_controller Rev32_position_controller Rev33_position_controller joint_state_controller "/>
-<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-  <remap from="/joint_states" to="/ruxonros2/joint_states"/>
-</node>
-
-</launch>
