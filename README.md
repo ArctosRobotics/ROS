@@ -75,4 +75,3 @@ Here, you'll find the configuration files for Moveit, a motion planning framewor
 - You can reference my current layout and wiring schematic below:
   ![aerialRobotSketch.pdf](/aerial_robot_sketch.png)
 
-Please note that this README has been adapted to describe the Arctos robotic arm and provide instructions specific to your setup.
