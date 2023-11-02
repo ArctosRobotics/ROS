@@ -1,17 +1,17 @@
 # Arctos Robotic Arm (ROS Packages)
 
 This repository contains ROS packages for the Arctos robotic arm, enabling motion planning, execution, and simulation in both virtual and real environments.
-Original
+initially forked from [jesseweisberg/moveo_ros]([https://github.com/syuntoku14/fusion2urdf](https://github.com/jesseweisberg/moveo_ros)) and edited match Arctos 6 axis robotic arm. 
 ## How to Use:
 
 ### Setting Up Arctos Simulation with Motion Planning
 ![moveit_screenshot.jpg](/moveit_screenshot.jpg)
 
-1. Make sure you have ROS properly installed with a working workspace. This repository assumes ROS Kinetic on Ubuntu 16.04, so make any necessary adjustments if you are using a different configuration. Place the 'arctos_ros' package in the 'src' directory of your catkin workspace.
+1. Make sure you have ROS properly installed with a working workspace. This repository assumes ROS Melodic on Ubuntu 18.04, so make any necessary adjustments if you are using a different configuration. Place the 'arctos_ros' package in the 'src' directory of your catkin workspace.
 
 2. To plan and execute trajectories for the Arctos arm in simulation (using RVIZ with Moveit plugin), run the following terminal command:
    ```
-   roslaunch arctos_moveit_config demo.launch
+   roslaunch arctos_config demo.launch
    ```
 
 3. Once the window loads, enable "Allow Approximate IK Solutions" in the bottom-left corner. Navigate to the "Planning" tab in the Motion Planning panel of RVIZ. You can set a new goal state by either dragging the interactive marker (the light blue ball at the end effector) or selecting one under "Select Goal State." After updating the goal state, clicking "Plan and Execute" will generate and execute the trajectory from the start state to the updated goal state.
@@ -21,14 +21,14 @@ Original
 
    - If you already have the ros_lib library in your Arduino libraries directory (<Arduino sketchbook>/libraries), follow the last troubleshooting tip to avoid errors related to "ArmJointState.h". ROS requires you to remove ros_lib and regenerate it every time you introduce a new custom message.
 
-5. Update the pin layout to match your robot and the RAMPS 1.4 board in the **'arctos_moveit_arduino.ino'** file and upload it to your Arduino (assuming you are using a MEGA 2560). Ensure that both the real robot and the simulation start in the same position. To set the simulation upright initially, select "Upright" from the "Select Goal States" in RVIZ.
+5. Update the pin layout to match your robot and the CNC shield boards in the **'arctos_moveit_arduino.ino'** file and upload it to your Arduino (assuming you are using a MEGA 2560). Ensure that both the real robot and the simulation start in the same position. To set the simulation upright initially, select "home" from the "Select Goal States" in RVIZ.
 
 6. In 'arctos_moveit_convert.cpp', replace the `stepsPerRevolution` array with the steps per revolution (or microsteps per revolution) of each of your motors. If you don't know these values, you can experimentally determine how many microsteps per revolution your motors have using the MultiStepperTest.ino and recording/observing the results.
 
 7. With the simulation already running, execute the following commands in separate terminal windows:
 
    - ```rosrun rosserial_python serial_node.py /dev/ttyUSB0``` (establishes a rosserial node to communicate with the Arduino).
-   - ```rosrun arctos_moveit arctos_moveit_convert``` (converts joint_state rotations from the simulation to steps and publishes them on the /joint_steps topic, which the Arduino script subscribes to).
+   - ```rosrun moveo_moveit moveo_moveit_convert``` (converts joint_state rotations from the simulation to steps and publishes them on the /joint_steps topic, which the Arduino script subscribes to).
    - ```rostopic pub gripper_angle std_msgs/UInt16 <angle 0-180>``` (publishes the gripper angle).
 
 **Now, any trajectories planned and executed in the simulation will be echoed on the real Arctos robot.**
